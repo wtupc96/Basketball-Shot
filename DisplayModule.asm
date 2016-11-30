@@ -117,6 +117,21 @@ MOVE_BACKBOARD_LEFT MACRO
 	POP AX
 ENDM
 
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
 	PUSH AX
 	PUSH DS
 	
@@ -126,7 +141,10 @@ ENDM
 	;Clear the screen
 	CLEAR_SCREEN
 	
-	
+	;Change the video mode
+	MOV AH,00
+	MOV AL,04
+	INT 10H
 	
 DOO:	
 	PUSH SI
